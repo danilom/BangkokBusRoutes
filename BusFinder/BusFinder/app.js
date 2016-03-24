@@ -6,9 +6,9 @@ var busfinder;
         for (var _i = 0; _i < BusData.length; _i++) {
             var bl = BusData[_i];
             var stations0 = bl.directions[0] ?
-                bl.directions[0].stations.join("|") : "";
-            var stations1 = bl.directions[0] ?
-                bl.directions[0].stations.join("|") : "";
+                bl.directions[0].stations.join(" | ") : "";
+            var stations1 = bl.directions[1] ?
+                bl.directions[0].stations.join(" | ") : "";
             table.append(jQuery("<tr>")
                 .append(jQuery("<th>").text(bl.id))
                 .append(jQuery("<td>").text(stations0))

@@ -20,10 +20,10 @@ module busfinder {
 
         for (const bl of BusData) {
             const stations0 = bl.directions[0] ?
-                bl.directions[0].stations.join("|") : "";
+                bl.directions[0].stations.join(" | ") : "";
 
-            const stations1 = bl.directions[0] ?
-                bl.directions[0].stations.join("|") : "";
+            const stations1 = bl.directions[1] ?
+                bl.directions[0].stations.join(" | ") : "";
 
             table.append(
                 jQuery("<tr>")
