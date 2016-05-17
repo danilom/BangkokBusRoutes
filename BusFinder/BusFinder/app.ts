@@ -23,7 +23,7 @@ module busfinder {
                 bl.directions[0].stations.join(" | ") : "";
 
             const stations1 = bl.directions[1] ?
-                bl.directions[0].stations.join(" | ") : "";
+                bl.directions[1].stations.join(" | ") : "";
 
             table.append(
                 jQuery("<tr>")
@@ -56,6 +56,5 @@ module busfinder {
 
 
 window.onload = () => {
-    var el = document.getElementById('content');
-    busfinder.start(el);
+    busfinder.start();
 };

@@ -8,7 +8,7 @@ var busfinder;
             var stations0 = bl.directions[0] ?
                 bl.directions[0].stations.join(" | ") : "";
             var stations1 = bl.directions[1] ?
-                bl.directions[0].stations.join(" | ") : "";
+                bl.directions[1].stations.join(" | ") : "";
             table.append(jQuery("<tr>")
                 .append(jQuery("<th>").text(bl.id))
                 .append(jQuery("<td>").text(stations0))
@@ -36,7 +36,6 @@ var busfinder;
     busfinder.start = start;
 })(busfinder || (busfinder = {}));
 window.onload = function () {
-    var el = document.getElementById('content');
-    busfinder.start(el);
+    busfinder.start();
 };
 //# sourceMappingURL=app.js.map
